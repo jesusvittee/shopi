@@ -17,13 +17,14 @@ function Home() {
   return (
    <Layout>
     Home
-    <div className='grid gap-0.5 grid-cols-4 w-3/6 max-w-screen-lg'>
+    <div className='grid gap-x-6 justify-center gap-y-16 grid-cols-4 w-5/6 max-w-screen-lg'>
     {
       items?.map( item => (
         <Card key={item.id} data={item}/>
         ))
       }
     </div>
+   
       <ProductDetail/>
    </Layout>
   )
