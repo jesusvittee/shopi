@@ -25,6 +25,9 @@ const [productDetail, setProductDetail] = useState({image:'', title:'',  price:'
 // shopping card add products to card 
 const [cardProducts, setCardProducts] = useState([])
 
+//shopping cart - order
+const [order, setOrder] = useState([])
+
 return(
         <contextCards.Provider
         value={{
@@ -40,6 +43,8 @@ return(
             isCheckoutSideMenuOpen,
             openCheckoutSideMenu,
             closeCheckoutSideMenu,
+            order,
+            setOrder,
         }}>
             {children}
         </contextCards.Provider>)

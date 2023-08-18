@@ -54,7 +54,7 @@ function Card(data) {
            {renderIcon(data.data.id)}
         </figure>
         <p className='flex justify-between w-full'>
-            <span className='text-xs font-light'>{data.data.title}</span>
+            <span className='text-sm font-light'>{data.data.title}</span>
             <span className='text-base font-medium'>${data.data.price}</span>
         </p>
     </div>
