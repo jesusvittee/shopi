@@ -1,5 +1,6 @@
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { XMarkIcon } from '@heroicons/react/24/solid'
-import React, { useContext } from 'react'
 import { contextCards } from '../../context'
 import { OrderCard } from '../OrderCard'
 import { totalPrice } from '../../utils'
@@ -15,13 +16,14 @@ const productDelete = (id) => {
 }
 const handleCheckout = () => {
   const orderToAdd = {
-data: '01,02,23',
-products: context.cardProducts,
-totalProducts:context.cardProducts.length,
-totalPrice:totalPrice(context.cardProducts)
+  data: '01,02,23',
+  products: context.cardProducts,
+  totalProducts:context.cardProducts.length,
+  totalPrice:totalPrice(context.cardProducts)
   }
-  context.setOrder(...context.order, orderToAdd)
+  context.setOrder([...context.order, orderToAdd])
   context.setCardProducts([])
+  context.setCount(0)
  }
   return (
     <aside className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} checkout-side-menu flex-col fixed right-0 border border-black rounded-lg bg-slate-100`}
@@ -52,7 +54,9 @@ totalPrice:totalPrice(context.cardProducts)
           <span className='font-light'>Total</span>
           <span className='font-medium text-lg'>${totalPrice(context.cardProducts)}</span>
         </p>
-        <button className='w-full bg-black py-3 text-white rounded-lg' onClick={() => handleCheckout()}>Cheakout</button>
+        <Link to='/my-orders/last'>
+          <button className='w-full bg-black py-3 text-white rounded-lg' onClick={() => handleCheckout()}>Checkout</button>
+        </Link>
         </div>
   
       
