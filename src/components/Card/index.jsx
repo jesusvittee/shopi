@@ -38,7 +38,7 @@ function Card(data) {
           onClick={(event)=>{ 
           addCardProducts(event, data.data)
           }}>
-          <PlusIcon className='h-full w-full'/>
+          <PlusIcon className='h-6 w-6'/>
         </div>
       )
     }
@@ -46,11 +46,11 @@ function Card(data) {
 // -----------
 
   return (
-    <div className='bg-white cursor-pointer w-52 h-56 rounded-lg'
+    <div className='bg-white cursor-pointer w-36 h-full lg:w-52 lg:h-56 rounded-lg'
     onClick={() => detailProduct(data.data) }>
-        <figure className='relative mb-2 w-full h-4/5 '>
+        <figure className='relative mb-2 w-full h-3/5 lg:h-4/5 '>
             <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-3 py-0.5'>{data.data.category}</span>
-            <img className='w-full h-full abject-cover rounded-lg' src={data.data.image} alt="headphones" />
+            <img className='w-full h-36 lg:h-full abject-cover rounded-lg' src={data.data.image} alt="headphones" />
            {renderIcon(data.data.id)}
         </figure>
         <p className='flex justify-between w-full'>

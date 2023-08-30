@@ -6,8 +6,7 @@ function OrderCard({id ,title, imageUrl, price, productDelete}) {
   let renderXMarckIcon
 
   if(productDelete){
-    renderXMarckIcon =    <XMarkIcon  onClick={() => productDelete(id)} className='h-6 w-6 cursor-pointer'/>
-   
+    renderXMarckIcon =    <XMarkIcon  onClick={() => productDelete(id)} className='h-6 w-6 cursor-pointer'/>   
   }
 
   return (

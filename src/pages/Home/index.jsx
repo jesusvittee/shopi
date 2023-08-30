@@ -34,11 +34,11 @@ function Home() {
         <h1 className='font-medium text-xl'>Exclusive Products</h1>
       </div>
       <input 
-      className='rounded-lg border border-black w-80 p-4 mb-4' 
+      className='rounded-lg border border-black w-22 p-2 mb-2 lg:w-80 lg:p-4 lg:mb-4' 
       type="text" 
       placeholder='Search a Product'
       onChange={(event)=> context.setSearchByTitle(event.target.value)}/>
-    <div className='grid gap-x-6 justify-center gap-y-16 grid-cols-4 w-5/6 max-w-screen-lg'>
+    <div className='grid justify-center items-center w-11/12 gap-x-2 gap-y-10 grid-cols-2 lg:gap-x-6 lg:gap-y-16 lg:grid-cols-4 lg:w-5/6 max-w-screen-lg'>
       {renderView()}
     </div>
    
