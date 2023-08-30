@@ -8,7 +8,7 @@ const context = useContext(contextCards)
 
   return (
     <aside className={`${context.isProductDetailOpen ? 'flex' : 'hidden'} w-full top-20 h-5/6
-    lg:w-80 lg:top-16 product-detail  flex-col fixed right-0 border border-black rounded-lg bg-slate-100`}
+    lg:w-80 lg:top-16 product-detail  flex-col fixed right-0 border border-black rounded-lg bg-white`}
     >
         <div className='flex justify-between items-center p-2 lg:p-5'>
         <h2 className='font-medium text-xl'>Detail</h2>
@@ -25,7 +25,7 @@ const context = useContext(contextCards)
        <p className='flex flex-col p-2 lg:p-5'>
         <span className='font-medium text-base '>${context.productDetail.price}</span>
         <span className='font-medium text-sm '>{context.productDetail.title}</span>
-        <span className='font-light text-xs '>{context.productDetail.description}</span>
+        <span className='font-light text-sm '>{context.productDetail.description}</span>
        </p>
     </aside>
   )
