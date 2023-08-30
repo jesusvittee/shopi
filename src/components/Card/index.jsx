@@ -55,7 +55,7 @@ function Card(data) {
         </figure>
         <p className='flex justify-between w-full mt-3'>
             <span className='w-3/4 text-xs lg:text-sm font-light h-full'>{data.data.title}</span>
-            <span className='text-base font-medium'>${data.data.price}</span>
+            <span className='text-sm lg:text-base font-medium'>${data.data.price}</span>
         </p>
     </div>
   )
