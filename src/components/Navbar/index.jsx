@@ -8,12 +8,12 @@ const Navbar = () => {
   const activeStyle = 'underline underline-offset-4'
 
   return (
-    <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-2 px-2 lg:py-5
+    <nav className='flex flex-row justify-between lg:items-center fixed z-10 top-0 w-full py-2 px-2 lg:py-5
     lg:px-8 text-sm font-light bg-white'>
-      <ul className='flex items-center gap-3'>
+      <ul className='flex items-baseline lg:items-center gap-1 lg:gap-3'>
         <li className='font-semibold text-lg'>
           <NavLink 
-          to='/shoppi'
+          to='/shopi'
           onClick={() => context.setSearchByCategory()}
           >
             Shopi
@@ -21,7 +21,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to='/'
+            to='/shopi'
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }
@@ -60,32 +60,9 @@ const Navbar = () => {
             Jewelery
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to='/toys'
-            onClick={() => context.setSearchByCategory('toys')}
-            className={({ isActive }) =>
-              isActive ? activeStyle : undefined
-            }>
-            Toys
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to='/others'
-            onClick={() => context.setSearchByCategory('others')}
-            className={({ isActive }) =>
-              isActive ? activeStyle : undefined
-            }>
-            Others
-          </NavLink>
-        </li>
       </ul>
-      <ul className='flex items-center gap-3'>
-        <li className='text-black/60'>
-          jesusvitte@example.com
-        </li>
-        <li>
+      <ul className='flex flex-col-reverse lg:flex-row  lg:justify-items-center gap-2 lg:gap-3'>
+        <li className="text-xs">
           <NavLink
             to='/my-orders'
             className={({ isActive }) =>
@@ -94,22 +71,13 @@ const Navbar = () => {
             My Orders
           </NavLink>
         </li>
-        <li>
+        <li className="text-xs">
           <NavLink
             to='/my-account'
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
             My Account
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to='/sing-in'
-            className={({ isActive }) =>
-              isActive ? activeStyle : undefined
-            }>
-            Sign In
           </NavLink>
         </li>
         <li className='flex'>

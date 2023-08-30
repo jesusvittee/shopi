@@ -48,13 +48,13 @@ function Card(data) {
   return (
     <div className='bg-white cursor-pointer w-36 h-full lg:w-52 lg:h-56 rounded-lg'
     onClick={() => detailProduct(data.data) }>
-        <figure className='relative mb-2 w-full h-3/5 lg:h-4/5 '>
+        <figure className='relative mb-2 w-full h-36 lg:h-4/5 '>
             <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-3 py-0.5'>{data.data.category}</span>
             <img className='w-full h-36 lg:h-full abject-cover rounded-lg' src={data.data.image} alt="headphones" />
            {renderIcon(data.data.id)}
         </figure>
-        <p className='flex justify-between w-full'>
-            <span className='text-sm font-light'>{data.data.title}</span>
+        <p className='flex justify-between w-full mt-3'>
+            <span className='w-3/4 text-xs lg:text-sm font-light h-full'>{data.data.title}</span>
             <span className='text-base font-medium'>${data.data.price}</span>
         </p>
     </div>

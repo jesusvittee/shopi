@@ -38,7 +38,7 @@ function Home() {
       type="text" 
       placeholder='Search a Product'
       onChange={(event)=> context.setSearchByTitle(event.target.value)}/>
-    <div className='grid justify-center items-center w-11/12 gap-x-2 gap-y-10 grid-cols-2 lg:gap-x-6 lg:gap-y-16 lg:grid-cols-4 lg:w-5/6 max-w-screen-lg'>
+    <div className='grid justify-center justify-items-center w-11/12 gap-x-2 gap-y-10 grid-cols-2 lg:gap-x-6 lg:gap-y-16 lg:grid-cols-4 lg:w-5/6 max-w-screen-lg'>
       {renderView()}
     </div>
    
